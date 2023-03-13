@@ -372,11 +372,11 @@ class Reader:
 def main(args):       
     # 创建一个Reader对象，并调用show_info方法
     if args.sort == 'Relevance':
-        sort = arxiv.SortCriterion.Relevance
+        args.sort = arxiv.SortCriterion.Relevance
     elif args.sort == 'LastUpdatedDate':
-        sort = arxiv.SortCriterion.LastUpdatedDate
+        args.sort = arxiv.SortCriterion.LastUpdatedDate
     else:
-        sort = arxiv.SortCriterion.Relevance
+        args.sort = arxiv.SortCriterion.Relevance
         
     if args.pdf_path:
         reader1 = Reader(key_word=args.key_word, 
